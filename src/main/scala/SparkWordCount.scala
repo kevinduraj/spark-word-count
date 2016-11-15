@@ -51,7 +51,6 @@ object SparkWordCount {
    
     distinct.saveAsTextFile(outputDir + "/distinct")
     //distinct.saveAsSequenceFile("out-sequence")
-
     sc.stop()
   }
 
