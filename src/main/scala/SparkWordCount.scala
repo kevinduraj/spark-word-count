@@ -51,6 +51,8 @@ object SparkWordCount {
    
     distinct.saveAsTextFile(outputDir + "/distinct")
     //distinct.saveAsSequenceFile("out-sequence")
+
+    sc.stop()
   }
 
 
@@ -70,6 +72,7 @@ object SparkWordCount {
     filter.foreach(println)
     println("=================================================")
 
+    sc.stop()
   }
 
   /*----------------------------------------------------------------------------*/
@@ -90,6 +93,7 @@ object SparkWordCount {
     reduced.foreach(println)
     println("=================================================")
 
+    sc.stop()
   }
 
   /*----------------------------------------------------------------------------*/
@@ -120,6 +124,7 @@ object SparkWordCount {
     charCounts.foreach(println)
     println("=================================================")
 
+    sc.stop()
   }
 
 }
